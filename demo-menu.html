@@ -1,0 +1,256 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - Page Test</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/uikit/2.26.2/css/uikit.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/uikit/2.26.2/css/components/sticky.min.js'>
+
+      <style>
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,300,300italic,600,600italic);
+body {
+  margin-left: 0 !important;
+}
+
+header[role="home"] {
+  position: relative;
+  height: 100vh;
+  min-height: 450px;
+  background-image: url(https://source.unsplash.com/6PF6DaiWz48/2650x1440);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+header[role="home"]::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 0;
+}
+header[role="home"]::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(0 100%, 0 95%, 50% 100%, 100% 95%, 100% 100%);
+  background-color: white;
+  z-index: 1;
+}
+
+.sticky-menu {
+  z-index: 100;
+}
+.sticky-menu.uk-active .main-navbar {
+  margin-top: 0;
+}
+
+.main-navbar {
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+.main-navbar::after {
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.main-navbar__logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 100px;
+  height: 40px;
+  margin: 0 auto;
+  background-color: crimson;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+}
+@media (min-width: 768px) {
+  .main-navbar__logo {
+    position: relative;
+    float: left;
+  }
+}
+
+.main-navbar__nav {
+  float: right;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.main-navbar__nav > li {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+.main-navbar__nav > li > a {
+  display: inline-block;
+  padding: 0 5px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 40px;
+  transition: 280ms;
+}
+.main-navbar__nav > li > a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.main-navbar--icons, .main-navbar__search-btn, .main-navbar__mobile-btn {
+  padding: 0 5px;
+  font-size: 18px;
+  color: white;
+  line-height: 40px;
+  transition: 280ms;
+}
+.main-navbar--icons:hover, .main-navbar__search-btn:hover, .main-navbar__mobile-btn:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.main-navbar__search-btn {
+  float: right;
+  margin-left: 0;
+}
+@media (min-width: 480px) {
+  .main-navbar__search-btn {
+    margin-left: 10px;
+  }
+}
+
+.main-navbar__mobile-btn {
+  float: left;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  height: calc(100% - 40px - 30px - 10px);
+  padding: 0 30px;
+}
+
+.hero-content__heading, .hero-content__heading--contrast {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero-content__heading--contrast {
+  color: white;
+}
+
+    </style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no" >
+
+  <header role="home">
+	
+	<div class="sticky-menu" data-uk-sticky="{top:-200, animation: 'uk-animation-slide-top'}">
+		<nav class="main-navbar">
+			<a href="#main-offcanvas" class="main-navbar__mobile-btn uk-icon-bars uk-visible-small" data-uk-offcanvas></a>
+			<a href="" class="main-navbar__logo">LOGO</a>
+			<a href="#search-modal" class="main-navbar__search-btn uk-icon-search" data-uk-modal></a>
+			<ul class="main-navbar__nav uk-hidden-small">
+				<li><a href="">About</a></li>
+				<li><a href="">Services</a></li>
+				<li><a href="">Clients</a></li>
+				<li><a href="">Portfolio</a></li>
+				<li><a href="">Cases</a></li>
+				<li><a href="">Blog</a></li>
+				<li><a href="">Career</a></li>
+				<li><a href="">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+	
+	<section class="hero-content uk-vertical-align uk-text-center">
+		<div class="uk-vertical-align-middle">
+			<h1 class="hero-content__heading--contrast">
+				Some cool text here
+			</h1>
+		</div>
+	</section>
+	
+</header>
+
+<section style="height: 100vh"></section>
+
+<!-- page components -->
+<div id="search-modal" class="uk-modal">
+	<div class="uk-modal-dialog">
+		<form action="" class="uk-form">
+			<div class="uk-form-icon uk-width-1-1">
+				<i class="uk-icon-search"></i>
+				<input type="text" class="uk-width-1-1 uk-form-large" autofocus placeholder="What are you looking for?" />
+			</div>
+		</form>
+	</div>
+</div>
+
+<div id="main-offcanvas" class="uk-offcanvas">
+	<div class="uk-offcanvas-bar">
+		<div class="uk-panel">
+			<h3 class="uk-contrast">Raffcom</h3>
+		</div>
+		<ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
+			<li><a href="">About</a></li>
+			<li><a href="">Services</a></li>
+			<li><a href="">Clients</a></li>
+			<li><a href="">Portfolio</a></li>
+			<li><a href="">Cases</a></li>
+			<li><a href="">Blog</a></li>
+			<li><a href="">Career</a></li>
+			<li><a href="">Contact</a></li>
+		</ul>
+	</div>
+</div>
+  
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/uikit/2.26.2/js/uikit.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/uikit/2.26.2/js/components/sticky.min.js'></script>
+
+  
+  
+  
+
+</body>
+
+</html>
+ 
